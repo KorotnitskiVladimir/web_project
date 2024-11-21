@@ -1,0 +1,542 @@
+@use "../../node_modules/@crossfox/css-start/dist/base.min.css";
+@import "variables";
+@import "base";
+@import "header";
+
+/* banner section */
+.banner-section {
+  background: url("../img/light_sky.jpg") no-repeat center/cover;
+
+  h1 {
+    color: $secondary-text;
+    font-size: $font-xl;
+    margin: 0 auto;
+    transform: rotate(-90deg);
+    max-width: 70rem;
+  }
+
+}
+
+
+.banner-title {
+  &::before {
+    content: url('../img/arrow.svg');
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    transform: rotate(-90deg) translateY(50%);
+    bottom: -10rem;
+    right: 50%;
+  }
+}
+
+.banner-section-container {
+  width: 100%;
+  padding: 38rem 0 30rem;
+  position: relative;
+}
+
+.banner-title-name {
+  font-weight: 300;
+}
+
+.banner-title-surname {
+  font-weight: 800;
+  font-size: $font-xxl;
+  text-transform: uppercase;
+  letter-spacing: 0.01rem;
+}
+
+.social {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2.5rem;
+  gap: 1rem;
+  svg {
+    height: 2rem;
+    width: 2rem;
+    fill: #fff;
+    transition: all 0.4s ease-out;
+  }
+
+  svg:hover{
+    scale: 1.3;
+  }
+  
+}
+
+/* aboutme section */
+
+.aboutme-section {
+  color: $primary-text;
+  gap: 8rem;
+  p {
+    text-align: center;
+  }
+}
+
+.aboutme-container {
+  align-items: center;
+  gap: 2rem;
+  max-width: 65rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aboutme-cards {
+  svg {
+    fill: $primary-text;
+    height: 10rem;
+    width: 10rem;
+  }
+}
+
+.contact-section {
+  color: $primary-text;
+  gap: 8rem;
+  p {
+    text-align: center;
+  }
+}
+
+.contact-form {
+  gap: 6rem;
+  input {
+    width: 100%;
+    border: 0;
+    border-bottom: 0.2rem solid $primary-color;
+    padding: 1.5rem;
+  }
+  input::placeholder {
+    color: $primary-text;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+  }
+  .fx-sb {
+    gap: 3rem;
+  }
+}
+
+.contact-btn {
+  background-color: $secondary-text;
+  color: $primary-text;
+  border: 0.2rem solid $primary-text;
+  padding: 1.5rem 2rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  width: 15rem;
+  margin: auto;
+  font-weight: 700;
+  transition: all 0.4s ease-out;
+}
+
+.contact-btn:hover{
+  scale: 1.05;
+  color: rgb(19, 19, 94);
+  border-color: rgb(19, 19, 94)
+}
+
+.tabs-container {
+  gap: 8rem;
+}
+
+.tab-content {
+  display: none;
+  &.active {
+    display: grid;
+  }
+}
+
+.tab-btn {
+  background-color: $secondary-text;
+  border: none;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.tabs {
+  margin: auto;
+}
+
+.tab-btn.active {
+  border-bottom: 0.1rem solid $primary-text;
+}
+
+#projects-btn {
+  background-color: $secondary-text;
+  color: $primary-text;
+  border: 0.2rem solid $primary-text;
+  padding: 1.5rem 2rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  width: 20rem;
+  margin: auto;
+  font-weight: 700;
+  text-align: center;
+  transition: all 0.4s ease-out;
+}
+
+#projects-btn:hover{
+  scale: 1.05;
+  color: rgb(19, 19, 94);
+  border-color: rgb(19, 19, 94);
+}
+
+.tab-grid {
+  grid-template-areas:
+    "area1 area2 area3"
+    "area4 area5 area6";
+  gap: 2rem 2rem;
+  width: 100%;
+  img {
+    display: block;
+  }
+  div {
+    width: 100%;
+  }
+}
+.area1 {
+  grid-area: area1;
+}
+.area2 {
+  grid-area: area2;
+}
+.area3 {
+  grid-area: area3;
+}
+
+.area4 {
+  grid-area: area4;
+}
+
+.area5 {
+  grid-area: area5;
+}
+
+.area6 {
+  grid-area: area6;
+}
+
+/* skills */
+.skills-section {
+  background: url("..//img/light_sky.jpg") center/cover no-repeat;
+  color: $secondary-text;
+}
+
+.skill-cards,
+.footer-cards {
+  text-align: center;
+}
+
+.progress {
+  position: relative;
+  height: 16rem;
+  width: 16rem;
+  cursor: pointer;
+}
+
+.progress-circle {
+  transform: rotate(-90deg);
+  width: 20rem;
+  height: 20rem;
+}
+
+.progress-circle-back {
+  fill: none;
+  stroke: #d2d2d2;
+  stroke-width: 0.2rem;
+}
+
+.progress-circle-prog {
+  fill: none;
+  stroke: $secondary-text;
+  stroke-width: 0.2rem;
+  stroke-dasharray: 0 999;
+  stroke-dashoffset: 0;
+  transition: stroke-dasharray 0.7s linear 0s;
+}
+
+.progress-text {
+  width: 100%;
+  position: absolute;
+  top: 6rem;
+  text-align: center;
+  font-size: 2em;
+}
+
+.skills-section-container {
+  gap: 8rem;
+}
+
+.info-section {
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url("../img/light_sky.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: $secondary-text;
+  p {
+    text-align: center;
+  }
+}
+
+.info-section-text {
+  font-size: $font-xl;
+  letter-spacing: 0.1em;
+}
+
+.info-section-container {
+  gap: 4rem;
+}
+
+.bg-filter {
+
+  -webkit-backdrop-filter: brightness(75%);
+  backdrop-filter: brightness(75%);
+}
+
+.footer {
+  background-color: rgb(19, 19, 94);
+  color: $secondary-text;
+  h3 {
+    font-size: $font-s;
+  }
+  .button-white {
+    max-width: 20rem;
+    margin: auto;
+    color: $secondary-text;
+    background-color: rgb(19, 19, 94);
+    border: 0.2rem solid $secondary-text;
+  }
+  .footer-cards {
+    margin: 0 auto;
+    gap: 3rem;
+    max-width: 70rem;
+    svg {
+      height: 4rem;
+      width: 4rem;
+    }
+  }
+  a:hover{
+  color: $secondary-color;
+  }
+}
+
+.footer-container {
+  gap: 6rem;
+}
+
+@media (max-width: $width-mob) {
+  html {
+    font-size: 2.9vw;
+  }
+  .aboutme-cards {
+    flex-direction: column;
+    gap: 2rem;
+    svg {
+      width: 6rem;
+      height: 6rem;
+    }
+  }
+  h2.info-section-text {
+    font-size: $font-m;
+  }
+  .tab-grid {
+    grid-template-areas:
+      "area1 area2"
+      "area3 area4"
+      "area5 area6";
+    gap: 2rem 2rem;
+    width: 100%;
+    // div {
+    //   width: 31.5rem;
+    // }
+  }
+  .tabs {
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .skill-cards {
+    flex-direction: column;
+  }
+  .credentials {
+    flex-direction: column;
+  }
+  .footer-cards {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .banner-section {
+    h1 {
+      font-size: $font-l;
+      transform: none;
+      text-align: left;
+    }
+  }
+  .banner-title-name {
+    font-size: $font-l;
+  }
+
+  .banner-title::before{
+    width: 10rem;
+  }
+
+  .banner-title-surname {
+    font-size: $font-l;
+  }
+  .banner-section-container {
+    padding: 24rem 0 25rem;
+  }
+  .social {
+    flex-direction: row;
+    position: static;
+    width: 10rem;
+    transform: none;
+  }
+  .banner-section-container {
+    position: static;
+  }
+  .banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0 auto;
+    gap: 3.5rem;
+  }
+  .aboutme{
+    flex-direction: column;
+    .myphoto{
+      width: 25rem;
+      height: 25rem;
+      margin: 0 auto;
+    }
+  }
+
+  .first-card[class]{
+    margin-left: 0;
+  }
+
+
+  .aboutme-info[class]{
+    p{
+      text-align: center;
+    }
+  }
+}
+
+.aboutme{
+  gap: 2rem;
+  img{
+    background-color: blue;
+    width: 30rem;
+    height: 30rem;
+  }
+}
+
+
+.aboutme-info{
+  max-width: 70rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  p{
+    text-align: left;
+  }
+}
+
+.modal{
+  background-color: rgba(0, 0, 0, 0.295);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  backdrop-filter: blur(0.25rem);
+  transition: all 0.7s ease-out;
+  h2{
+    margin-bottom: 5rem;
+  }
+  button{
+    width: 10rem;
+  }
+  @include isMobile {
+    .modal-content{
+      width: 95%;
+      padding: 2rem;
+    }
+    .contact-form{
+      gap: 3rem;
+    }
+  
+    .credentials{
+      gap: 2rem;
+    }
+  
+  }
+}
+
+.modal-content{
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 130rem;
+  max-height: 130rem;
+  padding: 5rem;
+  border-radius: 2rem;
+}
+
+.close{
+  font-size: $font-l;
+  cursor: pointer;
+}
+
+.close-container{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.modal.show{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.no-scroll{
+  overflow: hidden;
+}
+
+.myphoto{
+  background: url(../img/my_photo.jpg) no-repeat center/cover;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+}
+
+.activities{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  svg {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.first-card{
+  margin-left: 5rem;
+}
+
+
+@media(max-width: 1920px) { 
+  html {
+    font-size: .52vw;
+  }
+}

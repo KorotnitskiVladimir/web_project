@@ -1,0 +1,83 @@
+@import "variables";
+
+html {
+  font-size: 10px;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font: 160% "Open Sans", sans-serif;
+  color: $primary-text;
+  line-height: 1.2;
+  background-color: $secondary-text;
+}
+
+::selection {
+  background-color: $secondary-color;
+}
+
+.fx-sb {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fx-col-sb {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  width: 73%;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 11rem 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+  max-width: 40rem;
+    }
+
+.button-white{
+  color: $primary-text;
+  background-color: $secondary-text;
+  border: none;
+  padding: 1.5rem 2rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  transition: scale 0.4s ease-out;
+}
+
+.button-white:hover{
+  scale: 1.05;
+
+}
+
+h2{
+  text-align: center;
+  font-size: $font-m;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+}
+
+h3{
+  text-align: center;
+  font-size: $font-m;
+  font-weight: 600;
+}
+
+@media(max-width: $width-mob)
+{
+  .container{
+    width: 90%;}
+
+}
+

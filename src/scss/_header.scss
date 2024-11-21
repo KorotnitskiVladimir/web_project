@@ -1,0 +1,144 @@
+@import "variables";
+
+.header-menu{
+    gap: 3rem;
+    align-items: center;
+}
+
+.header{
+    padding: 4rem 0;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    color: $secondary-text;
+    font-weight: bolder;
+    .container {
+        align-items: center;
+    }
+    svg {
+      width: 8rem;
+      height: 8rem;
+      fill: $secondary-color;
+    }
+    a{
+      scale: 1;
+      transition: scale .4s ease-out;
+    }
+    a:hover{
+      scale: 1.1;
+    }
+}
+
+.header-white{
+    background-color: white;
+    padding: 1rem 0;
+    color: $primary-text;
+    box-shadow: 0rem .4rem .5rem 0rem rgba(0,0,0,0.13);
+    .button-white{
+        border: 0.2rem solid $primary-text; 
+    }
+    svg{
+      fill: black;
+    }
+    button{
+      transition: all 0.4s ease-out;
+    }
+    button:hover{
+      color: rgb(19, 19, 94);
+      border-color: rgb(19, 19, 94);
+    }
+}
+
+/* responsive menu */
+.burger-icon {
+  display: none;
+    width: 3rem;
+    height: 2.2rem;
+    span {
+        display: block;
+        width: 100%;
+        height: 0.35rem;
+        background-color: $secondary-text;
+        transition: transform .5s ease-out;
+    }
+    span:nth-child(1),
+    span:nth-child(3) {
+      transform-origin: left;
+    }
+    span:nth-child(2) {
+      opacity: 1;
+    }
+}
+
+@media (max-width: $width-mob) {
+    html {
+      font-size: 2.4vw;
+    }
+
+    .logo{
+        color: $primary-text;
+    }
+
+    .header{
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      svg{
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+
+    .header-white{
+      padding: 1rem 0;
+      span{
+        background-color: $primary-text;
+      }
+    }
+
+    .header-menu {
+    width: 100%;
+    position: fixed;
+    min-height: 100dvh;
+    top: 0;
+    left: 0;
+    transform: translateX(201%);
+    padding: 2rem 2rem;
+    transition: transform 0.6s;
+    flex-direction: column;
+    background: $secondary-text;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+
+    }
+   
+    .header.menu-active {
+      .button-white{
+        border: 0.2rem solid $primary-text;}
+        .burger-icon>span {
+          background-color: $primary-text;
+            &:nth-child(1) {
+              top: 50%;
+              transform: translateY(-50%) rotate(45deg);
+            }
+            &:nth-child(2) {
+              opacity: 0;
+            }
+            &:nth-child(3) {
+              bottom: 50%;
+              transform: translateY(50%) rotate(-45deg);
+            }
+          }
+
+          .header-menu {
+            transform: translateX(0%);
+            color: $primary-text;
+          }
+    }
+    .burger-icon{
+      display: flex;
+    }
+  }
+
