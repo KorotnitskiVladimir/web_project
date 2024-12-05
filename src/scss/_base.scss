@@ -44,9 +44,9 @@ body {
   gap: 2rem;
   align-items: center;
   max-width: 40rem;
-    }
+}
 
-.button-white{
+.button-white {
   color: $primary-text;
   background-color: $secondary-text;
   border: none;
@@ -56,28 +56,28 @@ body {
   transition: scale 0.4s ease-out;
 }
 
-.button-white:hover{
+.button-white:hover {
   scale: 1.05;
-
 }
 
-h2{
+h2 {
   text-align: center;
   font-size: $font-m;
   letter-spacing: 0.15em;
   font-weight: 600;
 }
 
-h3{
+h3 {
   text-align: center;
   font-size: $font-m;
   font-weight: 600;
 }
 
-@media(max-width: $width-mob)
-{
-  .container{
-    width: 90%;}
-
+@media (max-width: $width-mob) {
+  .container {
+    width: 90%;
+  }
+  .section {
+    padding: 6rem 0;
+  }
 }
-

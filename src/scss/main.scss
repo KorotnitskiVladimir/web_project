@@ -14,13 +14,11 @@
     transform: rotate(-90deg);
     max-width: 70rem;
   }
-
 }
-
 
 .banner-title {
   &::before {
-    content: url('../img/arrow.svg');
+    content: url("../img/arrow.svg");
     position: absolute;
     width: 20rem;
     height: 20rem;
@@ -60,10 +58,9 @@
     transition: all 0.4s ease-out;
   }
 
-  svg:hover{
+  svg:hover {
     scale: 1.3;
   }
-  
 }
 
 /* aboutme section */
@@ -74,6 +71,9 @@
   p {
     text-align: center;
   }
+  @include isMobile {
+    gap: 6rem;
+  }
 }
 
 .aboutme-container {
@@ -82,14 +82,6 @@
   max-width: 65rem;
   margin-left: auto;
   margin-right: auto;
-}
-
-.aboutme-cards {
-  svg {
-    fill: $primary-text;
-    height: 10rem;
-    width: 10rem;
-  }
 }
 
 .contact-section {
@@ -131,14 +123,17 @@
   transition: all 0.4s ease-out;
 }
 
-.contact-btn:hover{
+.contact-btn:hover {
   scale: 1.05;
   color: rgb(19, 19, 94);
-  border-color: rgb(19, 19, 94)
+  border-color: rgb(19, 19, 94);
 }
 
 .tabs-container {
   gap: 8rem;
+  @include isMobile {
+    gap: 6rem;
+  }
 }
 
 .tab-content {
@@ -177,7 +172,7 @@
   transition: all 0.4s ease-out;
 }
 
-#projects-btn:hover{
+#projects-btn:hover {
   scale: 1.05;
   color: rgb(19, 19, 94);
   border-color: rgb(19, 19, 94);
@@ -267,6 +262,9 @@
 
 .skills-section-container {
   gap: 8rem;
+  @include isMobile {
+    gap: 6rem;
+  }
 }
 
 .info-section {
@@ -291,7 +289,6 @@
 }
 
 .bg-filter {
-
   -webkit-backdrop-filter: brightness(75%);
   backdrop-filter: brightness(75%);
 }
@@ -318,8 +315,8 @@
       width: 4rem;
     }
   }
-  a:hover{
-  color: $secondary-color;
+  a:hover {
+    color: $secondary-color;
   }
 }
 
@@ -331,14 +328,7 @@
   html {
     font-size: 2.9vw;
   }
-  .aboutme-cards {
-    flex-direction: column;
-    gap: 2rem;
-    svg {
-      width: 6rem;
-      height: 6rem;
-    }
-  }
+
   h2.info-section-text {
     font-size: $font-m;
   }
@@ -360,6 +350,7 @@
   }
   .skill-cards {
     flex-direction: column;
+    gap: 4rem;
   }
   .credentials {
     flex-direction: column;
@@ -379,7 +370,7 @@
     font-size: $font-l;
   }
 
-  .banner-title::before{
+  .banner-title::before {
     width: 10rem;
   }
 
@@ -387,7 +378,7 @@
     font-size: $font-l;
   }
   .banner-section-container {
-    padding: 24rem 0 25rem;
+    padding: 24rem 0;
   }
   .social {
     flex-direction: row;
@@ -406,48 +397,47 @@
     margin: 0 auto;
     gap: 3.5rem;
   }
-  .aboutme{
+  .aboutme[class] {
     flex-direction: column;
-    .myphoto{
+    gap: 6rem;
+    .myphoto {
       width: 25rem;
       height: 25rem;
       margin: 0 auto;
     }
   }
 
-  .first-card[class]{
+  .first-card[class] {
     margin-left: 0;
   }
 
-
-  .aboutme-info[class]{
-    p{
+  .aboutme-info[class] {
+    p {
       text-align: center;
     }
   }
 }
 
-.aboutme{
+.aboutme {
   gap: 2rem;
-  img{
+  img {
     background-color: blue;
     width: 30rem;
     height: 30rem;
   }
 }
 
-
-.aboutme-info{
+.aboutme-info {
   max-width: 70rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  p{
+  p {
     text-align: left;
   }
 }
 
-.modal{
+.modal {
   background-color: rgba(0, 0, 0, 0.295);
   height: 100%;
   width: 100%;
@@ -459,29 +449,28 @@
   pointer-events: none;
   backdrop-filter: blur(0.25rem);
   transition: all 0.7s ease-out;
-  h2{
+  h2 {
     margin-bottom: 5rem;
   }
-  button{
+  button {
     width: 10rem;
   }
   @include isMobile {
-    .modal-content{
+    .modal-content {
       width: 95%;
       padding: 2rem;
     }
-    .contact-form{
+    .contact-form {
       gap: 3rem;
     }
-  
-    .credentials{
+
+    .credentials {
       gap: 2rem;
     }
-  
   }
 }
 
-.modal-content{
+.modal-content {
   background-color: white;
   position: absolute;
   left: 50%;
@@ -493,33 +482,33 @@
   border-radius: 2rem;
 }
 
-.close{
+.close {
   font-size: $font-l;
   cursor: pointer;
 }
 
-.close-container{
+.close-container {
   display: flex;
   flex-direction: row-reverse;
 }
 
-.modal.show{
+.modal.show {
   opacity: 1;
   pointer-events: auto;
 }
 
-.no-scroll{
+.no-scroll {
   overflow: hidden;
 }
 
-.myphoto{
+.myphoto {
   background: url(../img/my_photo.jpg) no-repeat center/cover;
   width: 30rem;
   height: 30rem;
   border-radius: 50%;
 }
 
-.activities{
+.activities {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -530,13 +519,12 @@
   }
 }
 
-.first-card{
+.first-card {
   margin-left: 5rem;
 }
 
-
-@media(max-width: 1920px) { 
+@media (min-width: $width-mob) and (max-width: 1920px) {
   html {
-    font-size: .52vw;
+    font-size: 0.54vw;
   }
 }
